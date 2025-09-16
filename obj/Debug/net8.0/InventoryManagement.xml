@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>InventoryManagement</name>
+    </assembly>
+    <members>
+        <member name="M:InventoryManagement.API.Controllers.AIController.SuggestCategory(InventoryManagement.API.Controllers.CategorySuggestionRequest)">
+            <summary>
+            Gợi ý danh mục sản phẩm dựa trên tên và mô tả
+            </summary>
+        </member>
+        <member name="M:InventoryManagement.API.Controllers.AIController.ImproveDescription(InventoryManagement.API.Controllers.DescriptionImprovementRequest)">
+            <summary>
+            Cải thiện mô tả sản phẩm hiện có
+            </summary>
+        </member>
+        <member name="M:InventoryManagement.API.Controllers.AIController.AnalyzeStock(System.Guid)">
+            <summary>
+            Phân tích tồn kho sản phẩm bằng AI
+            </summary>
+        </member>
+        <member name="M:InventoryManagement.API.Controllers.AIController.GetStockRecommendations">
+            <summary>
+            Lấy khuyến nghị nhập hàng thông minh
+            </summary>
+        </member>
+        <member name="M:InventoryManagement.API.Controllers.AIController.GetCategorySuggestions(InventoryManagement.API.Controllers.CategorySuggestionRequest)">
+            <summary>
+            Lấy danh sách các gợi ý danh mục
+            </summary>
+        </member>
+        <member name="M:InventoryManagement.API.Controllers.AIController.GenerateDescription(InventoryManagement.API.Controllers.DescriptionGenerationRequest)">
+            <summary>
+            Tạo mô tả sản phẩm tự động
+            </summary>
+        </member>
+        <member name="M:InventoryManagement.API.Controllers.ProductsController.GetAllProducts">
+            <summary>
+            Lấy danh sách tất cả sản phẩm
+            </summary>
+        </member>
+        <member name="M:InventoryManagement.API.Controllers.ProductsController.GetProduct(System.Guid)">
+            <summary>
+            Lấy thông tin sản phẩm theo ID
+            </summary>
+        </member>
+        <member name="M:InventoryManagement.API.Controllers.ProductsController.GetProductsByCategory(System.String)">
+            <summary>
+            Lấy danh sách sản phẩm theo danh mục
+            </summary>
+        </member>
+        <member name="M:InventoryManagement.API.Controllers.ProductsController.GetLowStockProducts">
+            <summary>
+            Lấy danh sách sản phẩm có tồn kho thấp
+            </summary>
+        </member>
+        <member name="M:InventoryManagement.API.Controllers.ProductsController.CreateProduct(InventoryManagement.Application.DTOs.CreateProductDto)">
+            <summary>
+            Tạo sản phẩm mới
+            </summary>
+        </member>
+        <member name="M:InventoryManagement.API.Controllers.ProductsController.UpdateProduct(System.Guid,InventoryManagement.Application.DTOs.UpdateProductDto)">
+            <summary>
+            Cập nhật thông tin sản phẩm
+            </summary>
+        </member>
+        <member name="M:InventoryManagement.API.Controllers.ProductsController.UpdateStockLimits(System.Guid,InventoryManagement.Application.DTOs.UpdateStockLimitsDto)">
+            <summary>
+            Cập nhật giới hạn tồn kho
+            </summary>
+        </member>
+        <member name="M:InventoryManagement.API.Controllers.ProductsController.DeleteProduct(System.Guid)">
+            <summary>
+            Xóa sản phẩm
+            </summary>
+        </member>
+        <member name="M:InventoryManagement.API.Controllers.ProductsController.AddStock(System.Guid,InventoryManagement.Application.DTOs.AddStockDto)">
+            <summary>
+            Nhập hàng vào kho
+            </summary>
+        </member>
+        <member name="M:InventoryManagement.API.Controllers.ProductsController.RemoveStock(System.Guid,InventoryManagement.Application.DTOs.RemoveStockDto)">
+            <summary>
+            Xuất hàng khỏi kho
+            </summary>
+        </member>
+        <member name="M:InventoryManagement.API.Controllers.ProductsController.GetAllCategories">
+            <summary>
+            Lấy danh sách tất cả danh mục
+            </summary>
+        </member>
+        <member name="M:InventoryManagement.API.Controllers.ProductsController.GetProductTransactions(System.Guid)">
+            <summary>
+            Lấy lịch sử giao dịch của sản phẩm
+            </summary>
+        </member>
+        <member name="T:InventoryManagement.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:InventoryManagement.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:InventoryManagement.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:InventoryManagement.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
