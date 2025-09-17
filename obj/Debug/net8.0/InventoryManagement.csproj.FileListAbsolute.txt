@@ -135,3 +135,5 @@ D:\Project\Offer\project_NET\obj\Debug\net8.0\InventoryManagement.xml
 D:\Project\Offer\project_NET\obj\Debug\net8.0\InventoryManagement.pdb
 D:\Project\Offer\project_NET\obj\Debug\net8.0\InventoryManagement.genruntimeconfig.cache
 D:\Project\Offer\project_NET\obj\Debug\net8.0\ref\InventoryManagement.dll
+D:\Project\Offer\project_NET\obj\Debug\net8.0\InventoryManagement.sourcelink.json
+D:\Project\Offer\project_NET\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
