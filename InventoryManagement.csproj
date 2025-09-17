@@ -20,8 +20,23 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+
+    <!-- JWT Authentication -->
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.0.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.0.3" />
+
+    <!-- API Documentation -->
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    
+    <!-- Validation -->
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+
+    <!-- Memory Caching -->
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="8.0.0" />
+
+    <!-- HTTP Client for external APIs -->
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
   </ItemGroup>
 
   <!-- Optional packages for advanced AI features -->
@@ -30,6 +45,8 @@
     <PackageReference Include="Microsoft.ML.Recommender" Version="0.21.1" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <!-- OpenAI .NET SDK -->
+    <PackageReference Include="OpenAI" Version="1.7.2" />
   </ItemGroup>
 
 </Project>
