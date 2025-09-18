@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using InventoryManagement.Application.Services;
 using InventoryManagement.Domain.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace InventoryManagement.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize(Policy = "AllRoles")]
     public class AIController : ControllerBase
     {
         private readonly IAIService _aiService;

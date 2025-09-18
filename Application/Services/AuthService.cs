@@ -74,6 +74,7 @@ namespace InventoryManagement.Application.Services
                 {
                     AccessToken = accessToken,
                     ExpiresIn = 3600, // 1 hour
+                    RefreshToken = refreshToken,
                     User = MapToUserDto(user)
                 };
 
@@ -160,6 +161,7 @@ namespace InventoryManagement.Application.Services
                 {
                     AccessToken = newAccessToken,
                     ExpiresIn = 3600,
+                    RefreshToken = newRefreshToken,
                     User = MapToUserDto(user)
                 };
 

@@ -14,10 +14,12 @@ namespace InventoryManagement.Infrastructure.Repositories
             _context = context;
             Products = new ProductRepository(_context);
             StockTransactions = new StockTransactionRepository(_context);
+            Users = new UserRepository(_context);
         }
 
         public IProductRepository Products { get; }
         public IStockTransactionRepository StockTransactions { get; }
+        public IUserRepository Users { get; }
 
         public async Task<int> SaveChangesAsync()
         {

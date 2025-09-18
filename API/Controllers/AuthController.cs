@@ -41,7 +41,7 @@ namespace InventoryManagement.API.Controllers
                 }
 
                 // Set refresh token in HTTP-only cookie
-                if (result.Data != null)
+                if (result.Data != null && !string.IsNullOrEmpty(result.Data.RefreshToken))
                 {
                     var cookieOptions = new CookieOptions
                     {
@@ -50,7 +50,7 @@ namespace InventoryManagement.API.Controllers
                         SameSite = SameSiteMode.Strict,
                         Expires = DateTime.UtcNow.AddDays(7)
                     };
-                    Response.Cookies.Append("refreshToken", "dummy_refresh_token", cookieOptions);
+                    Response.Cookies.Append("refreshToken", result.Data.RefreshToken, cookieOptions);
                 }
 
                 return Ok(result);
@@ -116,7 +116,7 @@ namespace InventoryManagement.API.Controllers
                 }
 
                 // Update refresh token cookie
-                if (result.Data != null)
+                if (result.Data != null && !string.IsNullOrEmpty(result.Data.RefreshToken))
                 {
                     var cookieOptions = new CookieOptions
                     {
@@ -125,7 +125,7 @@ namespace InventoryManagement.API.Controllers
                         SameSite = SameSiteMode.Strict,
                         Expires = DateTime.UtcNow.AddDays(7)
                     };
-                    Response.Cookies.Append("refreshToken", "new_dummy_refresh_token", cookieOptions);
+                    Response.Cookies.Append("refreshToken", result.Data.RefreshToken, cookieOptions);
                 }
 
                 return Ok(result);

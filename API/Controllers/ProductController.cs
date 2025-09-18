@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using InventoryManagement.Application.DTOs;
+using Microsoft.AspNetCore.Authorization;
 using InventoryManagement.Application.Services;
 
 namespace InventoryManagement.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize(Policy = "AllRoles")]
     public class ProductsController : ControllerBase
     {
         private readonly IProductService _productService;
@@ -97,6 +99,7 @@ namespace InventoryManagement.API.Controllers
         /// Tạo sản phẩm mới
         /// </summary>
         [HttpPost]
+        [Authorize(Policy = "ManagerOrAdmin")]
         public async Task<ActionResult<ProductDto>> CreateProduct(CreateProductDto createProductDto)
         {
             try
@@ -124,6 +127,7 @@ namespace InventoryManagement.API.Controllers
         /// Cập nhật thông tin sản phẩm
         /// </summary>
         [HttpPut("{id}")]
+        [Authorize(Policy = "ManagerOrAdmin")]
         public async Task<ActionResult<ProductDto>> UpdateProduct(Guid id, UpdateProductDto updateProductDto)
         {
             try
@@ -155,6 +159,7 @@ namespace InventoryManagement.API.Controllers
         /// Cập nhật giới hạn tồn kho
         /// </summary>
         [HttpPut("{id}/stock-limits")]
+        [Authorize(Policy = "ManagerOrAdmin")]
         public async Task<IActionResult> UpdateStockLimits(Guid id, UpdateStockLimitsDto updateStockLimitsDto)
         {
             try
@@ -186,6 +191,7 @@ namespace InventoryManagement.API.Controllers
         /// Xóa sản phẩm
         /// </summary>
         [HttpDelete("{id}")]
+        [Authorize(Policy = "ManagerOrAdmin")]
         public async Task<IActionResult> DeleteProduct(Guid id)
         {
             try
@@ -208,6 +214,7 @@ namespace InventoryManagement.API.Controllers
         /// Nhập hàng vào kho
         /// </summary>
         [HttpPost("{id}/stock/add")]
+        [Authorize(Policy = "ManagerOrAdmin")]
         public async Task<IActionResult> AddStock(Guid id, AddStockDto addStockDto)
         {
             try
@@ -244,6 +251,7 @@ namespace InventoryManagement.API.Controllers
         /// Xuất hàng khỏi kho
         /// </summary>
         [HttpPost("{id}/stock/remove")]
+        [Authorize(Policy = "ManagerOrAdmin")]
         public async Task<IActionResult> RemoveStock(Guid id, RemoveStockDto removeStockDto)
         {
             try
